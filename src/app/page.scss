@@ -1,0 +1,189 @@
+@use "@/styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Lobster&display=swap");
+main {
+  section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1900px;
+    &.main {
+      background-color: $color--bg;
+      padding: 50px;
+      @media screen and (max-width: 470px) {
+        padding: 50px 20px;
+      }
+      @media screen and (min-width: 971px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 70px;
+      }
+      @media screen and (max-width: 725px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        flex-direction: column;
+      }
+      img {
+        max-width: 400px;
+        width: 100%;
+        border-radius: 50px;
+        @media screen and (max-width: 970px) {
+          max-width: 300px;
+          float: right;
+        }
+      }
+      h1 {
+        font-family: "Lobster", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.7rem;
+        color: $color--text-light;
+        max-width: 400px;
+        margin-top: 0;
+        @media screen and (max-width: 385px) {
+          font-size: 2rem;
+        }
+      }
+      .text {
+        width: 100%;
+        p {
+          line-height: 1.4;
+          a {
+            color: $color--text-light;
+            text-decoration: underline;
+            transition: color 0.1s ease-in-out;
+            &:hover {
+              color: $color--text;
+            }
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 20px;
+        @media screen and (max-width: 340px) {
+          flex-direction: column;
+        }
+        a {
+          padding: 10px 30px;
+          border-radius: 999px;
+          text-decoration: none;
+          text-align: center;
+          transition: background-color 0.15s ease-in-out,
+            color 0.15s ease-in-out;
+          &.is-1 {
+            background-color: $color--text;
+            color: $color--bg;
+            outline: 2px solid $color--text;
+            &:hover {
+              outline: 2px solid $color--text;
+              color: $color--text;
+              background-color: transparent;
+            }
+          }
+          &.is-2 {
+            outline: 2px solid $color--text;
+            color: $color--text;
+            &:hover {
+              background-color: $color--text;
+              color: $color--bg;
+            }
+          }
+        }
+      }
+    }
+    &.about-lion {
+      padding: 50px;
+      @media screen and (max-width: 470px) {
+        padding: 50px 20px;
+      }
+      .line {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        @media screen and (max-width: 570px) {
+          flex-direction: column;
+          h2 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+          blockquote {
+            margin-top: 0;
+            padding-top: 0;
+            margin-bottom: 50px;
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+      h2 {
+        font-family: "Lobster", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2.5rem;
+        color: $color--text-light;
+        margin-top: 0;
+        @media screen and (max-width: 385px) {
+          font-size: 1.8rem;
+        }
+      }
+      blockquote {
+        text-align: right;
+      }
+      article {
+        display: flex;
+        align-items: flex-start;
+        gap: 70px;
+        @media screen and (max-width: 970px) {
+          flex-direction: column;
+          gap: 40px;
+        }
+        img {
+          max-width: 400px;
+          width: 100%;
+          border-radius: 50px;
+          @media screen and (max-width: 970px) {
+            max-width: 300px;
+            float: left;
+          }
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .text {
+          position: relative;
+          .mask {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(0, #fff, transparent);
+          }
+        }
+        a {
+          padding: 10px 30px;
+          border-radius: 999px;
+          text-decoration: none;
+          background-color: $color--text;
+          color: $color--bg;
+          width: max-content;
+          outline: 2px solid $color--text;
+          transition: background-color 0.15s ease-in-out,
+            color 0.15s ease-in-out;
+          &:hover {
+            outline: 2px solid $color--text;
+            color: $color--text;
+            background-color: transparent;
+          }
+        }
+      }
+      .text p {
+        line-height: 1.4;
+      }
+    }
+  }
+}

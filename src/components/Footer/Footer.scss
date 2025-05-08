@@ -1,0 +1,16 @@
+@use "@/styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Lobster&display=swap");
+
+footer {
+  padding: 20px;
+  background-color: $color--text;
+  color: $color--bg;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  a {
+    color: $color--bg;
+    text-decoration: underline;
+  }
+}
