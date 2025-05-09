@@ -186,4 +186,59 @@ main {
       }
     }
   }
+  .modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0000006b;
+    z-index: 9999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    @media screen and (max-width: 500px) {
+      padding: 15px 0;
+    }
+    .modal-content {
+      background-color: $color--bg;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 15px;
+      height: 100%;
+      overflow: auto;
+      position: relative;
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 2rem;
+        width: 100%;
+        text-align: right;
+        position: absolute;
+        right: 20px;
+      }
+      h2 {
+        font-family: "Lobster", serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 2rem;
+        color: $color--text-light;
+        margin-top: 20px;
+        @media screen and (max-width: 385px) {
+          font-size: 1.5rem;
+        }
+      }
+      blockquote {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        text-align: right;
+        width: 100%;
+      }
+    }
+  }
 }

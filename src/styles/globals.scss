@@ -57,5 +57,35 @@ label:hover {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  padding-top: 70px;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+main {
+  min-height: 90vh;
+}
+
+.kroshki {
+  display: flex;
+  padding: 40px 0 20px 0;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    &:not(.no_link) {
+      color: $color--text-light;
+    }
+    &.no_link {
+      cursor: default;
+      pointer-events: none;
+      color: $color--text;
+    }
+  }
+}
+.kroshki a + a::before {
+  color: $color--text;
+  content: "/";
+  padding: 0 10px;
 }
