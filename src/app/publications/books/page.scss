@@ -1,0 +1,33 @@
+@use "@/styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Lobster&display=swap");
+
+main {
+  padding: 0 20px;
+  h1 {
+    font-family: "Lobster", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.7rem;
+    color: $color--text-light;
+    max-width: 400px;
+    margin-top: 0;
+    @media screen and (max-width: 385px) {
+      font-size: 2rem;
+    }
+  }
+  .items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .item {
+      width: 180px;
+      img {
+        width: 180px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+}
