@@ -148,12 +148,12 @@ export default function Home() {
           </p>
 
           <p>
-            <Link href="#" onClick={toggleModal}>
+            <Link href="#" role="button" onClick={toggleModal}>
               <strong>А почему я называю А.Е. Махова Львом?</strong>
             </Link>
           </p>
           <div className="buttons">
-            <Link href="/publications" className="is-1">
+            <Link href="/publications/books" className="is-1">
               Публикации
             </Link>
             <Link href="/news" className="is-2">
@@ -208,7 +208,9 @@ export default function Home() {
               </p>
               <div className="mask"></div>
             </div>
-            <Link href="/about">Прочитать подробнее</Link>
+            <Link href="#" role="button" onClick={toggleModal}>
+              Прочитать подробнее
+            </Link>
           </div>
         </article>
       </section>

@@ -3,6 +3,68 @@ import "./page.scss";
 import Link from "next/link";
 
 export default function Home() {
+  const items = [
+    {
+      name: "Махов А. Е. Любовная риторика романтиков. М.: Знание, 1991.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. (в соавторстве с В. Л. Махлиным, И. В. Пешковым). Риторика поступка М. Бахтина. М.: Знание, 1991.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Ранний романтизм в поисках музыки. М.: Лабиринт, 1993.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. (в соавторстве с О. Л., Довгий). Двенадцать зеркал Пушкина. М.: Intrada, 1999.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Musica literaria: Идея словесной музыки в европейской поэтике. М.: ИНИОН РАН — Intrada, 2005.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Hortus daemonum. Словарь инфернальной мифологии Средневековья и Возрождения. М.: Intrada, 1998 (2-е изд., исправ. и доп., — 2007; 3-е изд. — 2014)",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Hostis Antiquus: Категории и образы средневековой христианской демонологии. М.: Intrada, 2006.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Средневековый образ между теологией и риторикой: Опыт толкования визуальной демонологии. М.: Intrada, 2011.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Эмблематика. Микрокосм. М.: Intrada, 2014.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Реальность романтизма. Очерки духовного быта Европы на рубеже XVIII–XIX веков. Тула: Аквариус, 2017.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. EX UNGUE: Бестиарий между эмблематикой и риторикой. Тула: Аквариус, 2022. 136 с., илл. (В память о львино-лисьих бестиариях)",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Жанр эмблемы в европейской книжной культуре XVI — начала XVII вв.: проблемы герменевтики и поэтики. М.: ИМЛИ РАН, 2022.",
+      file: "",
+    },
+    {
+      name: "Махов А.Е. Избранные сочинения: В 3 т. Т. 1. О русской литературе / Составление, общая редакция, предисловие О.Л. Довгий. Тула: Аквариус, 2023.",
+      file: "",
+    },
+    {
+      name: "Махов А. Е. Эмблематика: микрокосм / Общая редакция, послесловие О. Л. Довгий. Тула: Аквариус, 2024.",
+      file: "",
+    },
+    {
+      name: "Махов А.Е. Избранные сочинения: В 3-х т. Т. 2. О музыке слова / Составление, общая редакция, предисловие О.Л. Довгий. Тула: Аквариус, 2025.",
+      file: "",
+    },
+  ];
   return (
     <div className="max_container">
       <main>
@@ -17,45 +79,14 @@ export default function Home() {
         </nav>
         <section>
           <div className="items">
-            <div className="item">
-              <img
-                src="/images/publications/books/развернуть старика.jpg"
-                alt=""
-              />
-            </div>
-            <div className="item">
-              <img
-                src="/images/publications/books/ранний романтизм в поисках музыки.jpg"
-                alt=""
-              />
-            </div>
-            <div className="item">
-              <img
-                src="/images/publications/books/реальность романтизма.jpg"
-                alt=""
-              />
-            </div>
-            <div className="item">
-              <img
-                src="/images/publications/books/сатиры кантемира.jpg"
-                alt=""
-              />
-            </div>
-            <div className="item">
-              <img
-                src="/images/publications/books/сикретические религии.jpg"
-                alt=""
-              />
-            </div>
-            <div className="item">
-              <img src="/images/publications/books/событие.jpg" alt="" />
-            </div>
-            <div className="item">
-              <img
-                src="/images/publications/books/современное зарубежное литературоведение.jpg"
-                alt=""
-              />
-            </div>
+            {items.map((e, index) => (
+              <div key={index} className="item">
+                {index + 1}. {e.name} |{" "}
+                <Link href={e.file} target="_blank">
+                  Скачать
+                </Link>
+              </div>
+            ))}
           </div>
         </section>
       </main>

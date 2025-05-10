@@ -69,7 +69,10 @@ export default function Header() {
           submenu: [
             { title: "Книги", link: "/publications/books" },
             { title: "Статьи", link: "/publications/articles" },
-            { title: "Библиография", link: "/publications/bibliography" },
+            {
+              title: "Библиография",
+              link: "https://www.academia.edu/129268795/Список_публикаций_А_Е_Махова_1984_2025_Махов_А_Е_Избранные_сочинения_В_3_х_т_Т_2_О_музыке_слова_Составление_общая_редакция_предисловие_О_Л_Довгий_Тула_Аквариус_2025_C_624_625",
+            },
           ],
         },
         {
