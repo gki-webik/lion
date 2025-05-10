@@ -1,0 +1,107 @@
+@use "@/styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Lobster&display=swap");
+
+main {
+  padding: 0 20px;
+  h1 {
+    font-family: "Lobster", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.7rem;
+    color: $color--text-light;
+    max-width: 400px;
+    margin-top: 0;
+    @media screen and (max-width: 385px) {
+      font-size: 2rem;
+    }
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2 {
+      font-family: "Lobster", serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 2rem;
+      color: $color--text-light;
+      max-width: 400px;
+      margin-top: 0;
+      @media screen and (max-width: 385px) {
+        font-size: 1.3rem;
+      }
+    }
+    a {
+      color: $color--text;
+      transition: color 0.1s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        color: $color--text-light;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .line {
+        display: flex;
+        gap: 10px;
+        @media screen and (max-width: 370px) {
+          flex-direction: column;
+        }
+      }
+      input {
+        padding: 15px;
+        font-size: 17px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: $color--bg;
+        max-width: 500px;
+        width: 100%;
+        font-family: "Times New Roman", Times, serif;
+        color: $color--text-light;
+        &::placeholder {
+          color: $color--text-light;
+        }
+      }
+      textarea {
+        width: 100%;
+        resize: vertical;
+        max-height: 400px;
+        min-height: 100px;
+        height: 170px;
+        padding: 15px;
+        font-size: 17px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: $color--bg;
+        color: $color--text-light;
+        font-family: "Times New Roman", Times, serif;
+        &::placeholder {
+          color: $color--text-light;
+        }
+      }
+      button {
+        padding: 15px;
+        max-width: 300px;
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 0 auto;
+        background-color: $color--bg;
+        color: $color--text-light;
+        font-size: 17px;
+        border: none;
+        outline: none;
+        font-family: "Times New Roman", Times, serif;
+        transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+        &:hover {
+          color: $color--bg;
+          background-color: $color--text;
+        }
+      }
+    }
+  }
+}
