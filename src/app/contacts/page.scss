@@ -1,0 +1,46 @@
+@use "@/styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Lobster&display=swap");
+
+main {
+  padding: 0 20px;
+  h1 {
+    font-family: "Lobster", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.7rem;
+    color: $color--text-light;
+    max-width: 400px;
+    margin-top: 0;
+    @media screen and (max-width: 385px) {
+      font-size: 2rem;
+    }
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: $color--bg;
+    border-radius: 20px;
+    h2 {
+      font-family: "Lobster", serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 2rem;
+      color: $color--text-light;
+      max-width: 400px;
+      margin-top: 0;
+      @media screen and (max-width: 385px) {
+        font-size: 1.3rem;
+      }
+    }
+    a {
+      color: $color--text;
+      transition: color 0.1s ease-in-out;
+      text-decoration: none;
+      &:hover {
+        color: $color--text-light;
+      }
+    }
+  }
+}
